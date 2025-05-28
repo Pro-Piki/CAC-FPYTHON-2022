@@ -1,0 +1,482 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+/*estilo cursor*/
+html{
+  cursor: url(../imagenes/cursor.png), auto;
+}
+a{
+  cursor: url(../imagenes/hand.png), auto;
+}
+
+/*estilo a pags con fondo panal*/
+body{
+    background-image: url(../imagenes/fondo.png);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/*para que la barra de menu se vea al scrollear*/
+header{
+  position: fixed;
+  z-index: 10;
+}
+/*estilo Index*/
+.logo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.leyenda{
+  font-size: 25px;
+  font-weight: bold;
+}
+/*estilo a pags con fondo solido*/
+.page{
+  background: rgba(247, 224, 97, 1);
+}
+/*estilo al header*/
+.menu{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: goldenrod;
+  margin: auto;
+  overflow:hidden;
+}
+.logo2{
+  font-size: 35px;
+  padding: 10px 80px;
+  font-family:'Oleo Script Swash Caps', cursive; 
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.menu_items{
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+.menu_items li {
+  background-color: rgb(245, 217, 61);
+  border-radius: 20px;
+  border-color: black;
+  border-style: dashed;
+  margin: 0 5px;
+}
+.menu_items li a{
+  padding: 3px 13px;
+  text-decoration: none;
+  font-family: 'Yuji Mai', serif;
+  font-size: 20px;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+}
+.menu_items li:hover, li.active{
+  background-color: goldenrod;
+  transition: .5s;
+}
+.btn_menu{
+  margin-right: 30px;
+  font-size: 30px;
+  cursor:pointer;
+  display: none;
+}
+ul.show{
+  top: 65px;
+}
+/*estilo al home*/
+.contenido{
+  padding-top: 70px;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Oleo Script Swash Caps', cursive; 
+  font-size: 30px;
+  margin: 20px 0;
+}
+.container1, .container2, .container3{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;  
+}
+.nombre{
+  font-family: 'Comic Neue', cursive; 
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.imagen{
+  margin-bottom: 35px;
+}
+.imagen:hover {
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+}  
+/*estilo a recetas*/
+
+table{
+  border: 2px solid black;
+  padding: 1px;
+  background: rgb(252, 194, 47);
+}
+tr{
+  text-align: center;
+}
+th, td{
+  font-family: 'Comic Neue', cursive;
+  border: 1px solid black;
+  padding: 5px;
+}
+.receta{
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.dibujo{
+  grid-column-end: span 4;
+}
+.tabla{
+  grid-column-end: span 4;
+}
+.video{
+  grid-column-end: span 4;
+}
+.video iframe{
+  width: 400px;
+  height: 250px;   
+}
+/*estilo about*/
+.contenedor{
+  padding-top: 80px;
+}
+.cont1, .cont2{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+#info1, #info2{
+  background-color: goldenrod;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+}
+#info1 h1, #info1 h2, #info2 h2{
+  font-family:'Comic Neue', cursive;
+}
+#info1 h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+#info1 h2, #info2 h2{
+  font-size: 25px;
+}
+#foto1, #foto2{
+  padding: 20px;
+  background: gold;
+  border-radius: 50%;
+}
+/*estilo a Contacto*/
+.mail{
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.mail a{
+  text-decoration: none;
+  font-size: 70px;
+  color: black;
+  font-family: 'Comic Neue', cursive;
+}
+#containerMail{
+  padding: 40px 0;
+}
+#flores{
+  padding: 40px 0;
+  background: url(../imagenes/spriteFlores.png);
+  width: 200px;
+  height: 184px;
+  animation: flores 3s steps(10) infinite,
+             moverse 10s linear infinite;
+}
+/*estilo a tienda*/
+.container{
+  padding-top: 80px;
+}
+.container h1{
+  text-align: center;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 50px;
+  margin: 20px 0;
+}
+@keyframes flores{
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position: 2000px;
+  }
+}
+@keyframes moverse{
+  0%{
+    transform: translate(-2000px);
+  }
+  100%{
+    transform: translateX(1200px);
+  }
+}
+#abejaVolando{
+  padding: 40px 0;
+  background: url(../imagenes/abejas.png);
+  width: 235px;
+  height: 292px;
+  animation: volar 3s steps(8) infinite,
+             forward 10s linear infinite;
+}
+@keyframes volar{
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position: 1879px;
+  }
+}
+@keyframes forward{
+  0%{
+    transform: translate(-1879px);
+  }
+  100%{
+    transform: translateX(1200px);
+  }
+}
+/*estilo Registrese*/
+.contenedorForm{
+  padding-top: 100px;
+  font-family:'Comic Neue', cursive;  
+  font-size: 25px;
+}
+::placeholder{
+  font-size: 15px;
+}
+#enviar, #reset{
+  font-size: 20px;
+}
+/*estilo al show data*/
+.containerData{
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/*estilo ancla*/
+#ancla{
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+/*estilo al footer*/
+footer{
+  margin-top: auto;
+  background: goldenrod;
+  height: auto;
+}
+.social{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+.social li{
+  margin: 0 20px;
+  border-radius: 50%;
+}
+.social li a{
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+.social li:hover{
+  background-color: darkviolet;
+  transition: .5s;
+}
+.firma{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .logo2{
+    font-size: 25px;
+    padding-left: 35px;
+  }
+  .menu_items li a{
+    font-size: 12px;
+  }
+  .dibujo, .video{
+    grid-column-end: span 6;
+  }
+  .tabla{
+    display: none;
+  }
+  .contenedorForm{
+    font-size: 15px;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .menu{
+    height: 65px;
+  }
+  .btn_menu{
+    display: inline-flex;
+  }
+  .menu_items{
+    position: fixed;
+    width: 100vw;
+    height: calc(100% - 65px);
+    background: rgba(0, 0, 0, .85);
+    top: -100vh;
+    text-align: center;
+    transition: all .5s;
+    flex-direction: column;
+  }
+  .menu_items li{
+    margin: 30px 0 0 0; 
+    line-height: 30px;
+    border-style: none;
+  }
+  .menu_items li:hover{
+    background: none;
+  }
+  .menu_items li a{
+    font-size: 25px;
+  }
+  .menu_items li a:hover{
+    background-color: goldenrod;
+  }
+  .logo2{
+    font-size: 35px;
+    padding-left: 35px;
+  }
+  .titulo{
+    font-size: 35px;
+  }
+  .container1, .container2, .container3{
+    flex-direction: column;
+  }
+  .dibujo, .video{
+    grid-column-end: span 12;
+  }
+  .tabla{
+    display: none;
+  }
+  .imagen{
+    margin-bottom: 20px;
+  }
+  .nombre{
+    font-size: 35px;
+  }
+  #ancla{
+    font-size: 35px;
+  }
+  .social li a{ 
+    font-size: 35px;
+  }
+  .firma{
+    font-size: 25px;
+  }
+  #info1{
+    margin-bottom: 20px;
+  }
+  #info2{
+    margin-top: 20px;
+  }
+  .mail{
+    padding-top: 90px;
+  }
+  .mail a{
+    font-size: 40px;
+  }
+  .contenedorForm{
+    font-size: 15px;
+  }
+  .container h1{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo img{
+    width: 75%;
+  }
+  .leyenda{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .logo2{
+    font-size: 30px;
+    padding-left: 30px;
+  }
+  .titulo{
+    font-size: 20px;
+  }
+  .menu_items{
+    top:-150vh;
+  }
+  .social li a{
+    font-size: 30px;
+  }
+  .firma{
+    font-size: 20px;
+  }
+  #info1{
+    margin-bottom: 30px;
+  }
+  #info2{
+    margin-top: 30px;
+  }
+  #info1 h1{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #info1 h2, #info2 h2{
+    font-size: 20px;
+  }
+  .mail a{
+    font-size: 30px;
+  }
+  .contenedorForm{
+    font-size: 13px;
+  }
+  .container h1{
+    font-size: 30px;
+  }
+}
+
+
