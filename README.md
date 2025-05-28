@@ -16,7 +16,7 @@ Font Awesome
 
 JAVASCRIPTS 
 
-![Captura del index](imagenes/SS/index de la pagina.png)
+![Captura del index](imagenes/SS/indexdelapagina.png)
 
 ![Captura del home](imagenes/SS/home.png)
 
